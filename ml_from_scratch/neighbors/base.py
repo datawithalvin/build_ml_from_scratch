@@ -11,6 +11,8 @@ class baseKNN:
         Initialized KNN base, default k value it's 3.
         Parameters:
             - k (int): The number of nearest neighbors
+            - metric (str): distance metric to use
+            - p (int): Order the norm untuk minkowski distance. Ignored untuk euclidean dan manhattan.
         """
         self.k = k # jumlah neighbors yg akan digunakan untuk prediksi
         self.X_train = None # placeholder aja untuk training features
