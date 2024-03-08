@@ -7,6 +7,8 @@ class regressionKNN(baseKNN):
     def __init__(self, k=3, metric="euclidean", p=2):
         super().__init__(k, metric, p)
 
+    # *************************************
+
     def predict(self, X):
         """
         Predict the target value for each sample in X
@@ -19,7 +21,7 @@ class regressionKNN(baseKNN):
         if isinstance(X, pd.DataFrame):
             X = X.values
 
-        predictions = [] # init empty list to store prediction
+        predictions = [] # init empty list to store predictions
         for i in X:
             # for each sample in X, find its nearest neighbors in the training set
             neighbors_labels, _ = self._get_nearest_neighbors(i.reshape(1, -1))
