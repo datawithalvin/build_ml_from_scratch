@@ -30,7 +30,7 @@ class baseLinearRegression:
             A = X
 
         # hitung optimal coefficients 
-        theta = np.linalg.inv(A.T.dot(A)).dot(A.T).dot(y)
+        theta = np.linalg.inv(A.T @ A) @ A.T @ y
 
         # extract parameter
         if self.fit_intercept:
